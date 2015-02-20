@@ -22,7 +22,7 @@ KEEP_M2_CACHE="true"
 
 # create default system.properties for apps that had the jdk vendored in
 if [ -f ${CACHE_DIR}/.jdk/vendor ] && [ ! -f ${BUILD_DIR}/system.properties ]; then
-  echo "java.runtime.version=1.7" > ${BUILD_DIR}/system.properties
+  echo "java.runtime.version=1.8" > ${BUILD_DIR}/system.properties
 fi
 
 if [ -f ${CACHE_DIR}/system.properties ] && [ ! -f ${BUILD_DIR}/system.properties ]; then
@@ -34,7 +34,7 @@ if [ ! -d $CACHE_DIR ]; then
   logger -p user.notice -t "slugc[$$]" "language_pack_java new_java_app"
   KEEP_M2_CACHE="false"
   if [ ! -f ${BUILD_DIR}/system.properties ]; then
-    echo "java.runtime.version=1.7" > ${BUILD_DIR}/system.properties;
+    echo "java.runtime.version=1.8" > ${BUILD_DIR}/system.properties;
   fi
 elif [ -f $CACHE_DIR/removeM2Cache ]; then
   KEEP_M2_CACHE="false"
