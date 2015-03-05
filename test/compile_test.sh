@@ -13,7 +13,7 @@ testCompileWithVendorFlagGetsSystemProperties() {
   assertCapturedSuccess
 
   assertCaptured "Installing Maven"
-  assertFileMD5 "08a6e3ab11f4add00d421dfa57ef4c85"  ${CACHE_DIR}/.maven/bin/mvn
+  assertFileMD5 "9d4c6b79981a342940b9eff660070748"  ${CACHE_DIR}/.maven/bin/mvn
   assertTrue "mvn should be executable" "[ -x ${CACHE_DIR}/.maven/bin/mvn ]"
   
   assertCaptured "Installing settings.xml" 
@@ -94,7 +94,7 @@ testCompile()
   assertCapturedSuccess
 
   assertCaptured "Installing Maven"
-  assertFileMD5 "08a6e3ab11f4add00d421dfa57ef4c85"  ${CACHE_DIR}/.maven/bin/mvn
+  assertFileMD5 "9d4c6b79981a342940b9eff660070748"  ${CACHE_DIR}/.maven/bin/mvn
   assertTrue "mvn should be executable" "[ -x ${CACHE_DIR}/.maven/bin/mvn ]"
   
   assertCaptured "Installing settings.xml" 
